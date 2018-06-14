@@ -3,14 +3,18 @@
 <head>
     <title>PracticeAngularJS</title>
     <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/Script.js"></script>
 
 </head>
-<body ng-app>
+<body ng-app="myModule">
     <div>
         10 + 20 = {{ 10 + 20 }}
     </div>
     <div>
         20 + 40 = {{ 20 + 40 }}
+    </div>
+    <div ng-controller="myController">
+        {{ message }}
     </div>
 
 </body>
