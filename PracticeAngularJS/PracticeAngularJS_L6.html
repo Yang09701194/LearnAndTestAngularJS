@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>PracticeAngularJS</title>
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/Script_L6.js"></script>
+</head>
+
+<body ng-app="myModule">
+    <div ng-controller="myController">
+
+        <table>
+            <thead>
+                <tr>
+                    <th>firstName</th>
+                    <th>LastName</th>
+                    <th>Gender</th>
+                    <th>Salary</th>
+                </tr>
+            </thead>
+            <tbody ng-repeat="employee in employees">
+                <tr>                
+                    <td>{{ employee.firstName }}</td>
+                    <td>{{ employee.lastName }}</td>
+                    <td>{{ employee.gender }}</td>
+                    <td>{{ employee.salary }}</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <br/> <br/> 
+
+        <!-- 利用ng-init="parentIndex=$index" 這樣下一層就可以用 parentIndex 取代  $parent.$index -->
+        <ul ng-repeat="country in countries" ng-init="parentIndex=$index"> 
+            <li>{{ country.name }} - Index = {{$index}} </li>
+            <ul ng-repeat="city in country.cities">
+                <li>{{ city.name }} - Parent Index = {{$parent.$index}}, Index = {{$index}}</li>
+            </ul>
+        </ul>
+
+        
+    </div>
+
+
+
+
+</body>
+
+</html>
