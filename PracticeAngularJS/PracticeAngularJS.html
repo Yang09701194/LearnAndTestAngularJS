@@ -13,20 +13,21 @@
     <div>
         20 + 40 = {{ 20 + 40 }}
     </div>
-    <div ng-controller="myController1">
+    <div ng-controller="myController">
         {{ message }} <br/> 
         {{ employee.firstName }}  <br/> 
         {{ employee.lastName }}  <br/> 
         {{ employee.gender }} <br/> 
 
+        
+        <img src="{{ country.flag }}" alt="{{ country.name }}" style="height: 100px; width: 200px">
+        <!-- AngularJS ng src directive https://www.youtube.com/watch?v=YY_-BB_lZDI&index=4&list=PL6n9fhu94yhWKHkcL7RJmmXyxkuFB3KSl  -->
+        <img ng-src="{{ country.flag }}" alt="{{ country.name }}" style="height: 100px; width: 200px">
+
+    </div>
+    <div>
+        <img src="Images/advice-vaccines-taiwan.jpg" alt="taiwan img" style="height: 100px; width: 200px">
     </div>
 
 </body>
 </html> 
-
-
-
-
-
-
-
