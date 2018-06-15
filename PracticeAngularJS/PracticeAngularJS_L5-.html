@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>PracticeAngularJS</title>
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/Script.js"></script>
+</head>
+
+<body ng-app="myModule">
+    <div ng-controller="myController">
+        <input type="text"  ng-model="message">
+        <br/>  <br/>
+        <input type="text"  ng-model="greeting">
+        <br/>  <br/>
+        {{ message }}
+        <br/>  <br/>
+        <!-- 這個屬性沒有存在於 model 卻還是可以更新 -->
+        {{ greeting }}
+        <br/>  <br/>
+
+        <table>
+            <tr>
+                <td>FirstName</td>
+                <td>
+                    <input type="text" ng-model="employee.firstName">
+                </td>
+            </tr>
+            <tr>
+                <td>LastName</td>
+                <td>
+                    <input type="text" ng-model="employee.lastName">
+                </td>                
+            </tr>
+            <tr>
+                <td>Gender</td>
+                <td>
+                        <input type="text" ng-model="employee.gender">
+                </td>
+            </tr>
+        </table>
+
+        <table>
+            <tr>
+                <td>FirstName</td>
+                <td>
+                    {{ employee.firstName }}
+                </td>
+            </tr>
+            <tr>
+                <td>LastName</td>
+                <td>
+                    {{ employee.lastName }}
+                </td>
+            </tr>
+            <tr>
+                <td>Gender</td>
+                <td>
+                    {{ employee.gender }}
+                </td>
+            </tr>
+        </table>
+
+    </div>
+</body>
+
+</html>
