@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>PracticeAngularJS_L7</title>
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/Script_L7.js"></script>
+    <link rel="stylesheet" href="Style/Style.css">
+</head>
+<body ng-app="myModule">
+    <div ng-controller="myController">
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Likes</th>
+                    <th>Dislikes</th>
+                    <th>Like/Dislikes</th>
+                </tr>
+            </thead>
+            <tbody ng-repeat="technology in technologies">
+                <td>{{ technology.name }}</td>
+                <td>{{ technology.likes }}</td>
+                <td>{{ technology.dislikes }}</td>
+                <td>
+                    <input type="button" value="Like" ng-click="incrementLikes(technology)">
+                    <input type="button" value="Dislike" ng-click="incrementDislikes(technology)">
+                </td>
+
+            </tbody>
+
+        </table>
+    </div>
+
+
+</body>
+</html>

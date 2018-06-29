@@ -15,7 +15,7 @@ var myController = function ($scope) {
         name: "Taiwan",
         capital: "Taipei",
         flag: "Images/advice-vaccines-taiwan.jpg"
-    }
+    };
 
     $scope.employee = employee;
     $scope.country = country;
